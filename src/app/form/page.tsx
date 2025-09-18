@@ -40,14 +40,14 @@ export default function FormPage() {
     <main className="min-h-screen relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white to-neutral-100" />
       <div className="container-safe py-16 sm:py-20">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl" style={{ marginRight: 40 }}>
           <h1 className="text-2xl sm:text-4xl font-semibold text-neutral-900">Workshop Registration</h1>
           <p className="mt-2 text-neutral-600">
             Share a few details and optionally submit a question for the speakers.
           </p>
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="mt-10 card p-6 sm:p-8">
+        <form onSubmit={handleSubmit(onSubmit)} className="mt-10 card p-6 sm:p-8" style={{ marginRight: 40 }}>
           <div className="grid sm:grid-cols-2 gap-6">
             <div>
               <label className="label" htmlFor="fullName">Full name</label>

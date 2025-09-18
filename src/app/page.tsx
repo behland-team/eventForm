@@ -1,23 +1,69 @@
+import Image from "next/image";
+import InfoBox from "@/components/InfoBox";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#FFF6EC] py-10">
       <div className="container-safe">
-        <div
-          className="mx-auto"
-          style={{ width: 696 }}
-        >
+        <div className="mx-auto flex gap-8" style={{ maxWidth: 1200 }}>
+          {/* Left Side - Event Information Tables */}
+          <div className="flex-1" style={{ maxWidth: 500 }}>
+          {/* Hourglass image, top left, as in Figma */}
+          <div
+            style={{
+              position: "absolute",
+              width: 118.69,
+              height: 175.66,
+              top: -60,
+              left: -60,
+              zIndex: 10,
+              transform: "rotate(-28.58deg) scaleX(-1)",
+              opacity: 1,
+              display: "flex",
+              alignItems: "flex-start",
+              justifyContent: "flex-start",
+            }}
+          >
+            <Image
+              src="/Img/hourglass.png"
+              alt="Hourglass"
+              width={119}
+              height={176}
+              style={{ width: "100%", height: "auto" }}
+              priority
+            />
+          </div>
+
           <section
-            className="rounded-2xl shadow-[0_0_7px_0_#00000040]"
-            style={{ background: "#FEECD8", height: 799 }}
+            style={{ 
+              width: 696,
+              height: 799,
+              borderRadius: 16,
+              background: "#FEECD8",
+              boxShadow: "0px 0px 7px 0px #00000040",
+              position: "relative"
+            }}
           >
             <div className="p-6 sm:p-8">
-              <div
-                className="rounded-xl px-4 sm:px-6 py-4 text-right"
-                style={{ background: "#CC6D14", width: 323, height: 75, marginInlineStart: "auto" }}
-              >
+              {/* Hero Title - Right aligned, single line */}
+              <div className="flex justify-end mb-6">
                 <h1
-                  className="text-white"
-                  style={{ fontFamily: "var(--font-lalezar)", fontSize: 48, lineHeight: "100%" }}
+                  style={{
+                    width: 323,
+                    height: 75,
+                    fontFamily: "var(--font-lalezar)",
+                    fontWeight: 400,
+                    fontSize: 48,
+                    lineHeight: "100%",
+                    letterSpacing: "0%",
+                    textAlign: "right",
+                    color: "#CC6D14",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "flex-end",
+                    whiteSpace: "nowrap",
+                    opacity: 1
+                  }}
                 >
                   همراهان عزیز بهلند!
                 </h1>
@@ -43,19 +89,68 @@ export default function Home() {
               <div className="mt-4 flex items-center justify-between" style={{ width: 600 }}>
                 <p
                   className="text-right"
-                  style={{ fontFamily: "var(--font-vazirmatn)", fontWeight: 600, fontSize: 20 }}
+                  style={{ fontFamily: "var(--font-vazirmatn)", fontWeight: 600, fontSize: 20, color: "#4D4D4D", background: "none" }}
                 >
                   بهلند : تحولی در یادگیری هدفمند
                 </p>
                 <span
-                  className="text-white rounded-md px-3 py-1"
-                  style={{ background: "#4D4D4D", fontFamily: "var(--font-vazirmatn)", fontWeight: 600, fontSize: 20 }}
+                  className="rounded-md px-3 py-1"
+                  style={{ color: "#4D4D4D", fontFamily: "var(--font-vazirmatn)", fontWeight: 600, fontSize: 20, background: "none" }}
                 >
                   آنلاین | حضور آزاد و رایگان
                 </span>
               </div>
+
+              {/* Info Boxes Section */}
+              <div className="mt-8" style={{ width: 600 }}>
+                {/* First Row - Date and Time Boxes */}
+                <div style={{ display: "flex", gap: 16, marginBottom: 16 }}>
+                  {/* Date Info Box */}
+                  <InfoBox
+                    text="جمعه 4 مهرماه ۱۴۰۴ (۲۶ سپتامبر ۲۰۲۵)"
+                    iconSrc="/Img/Calendar.png"
+                    iconAlt="Calendar"
+                    width={396}
+                    height={80}
+                    textWidth={293}
+                    textHeight={28}
+                  />
+                  
+                  {/* Time Info Box */}
+                  <InfoBox
+                    text="ساعت ۶ عصر"
+                    iconSrc="/Img/Clock.png"
+                    iconAlt="Clock"
+                    width={188}
+                    height={80}
+                    textWidth={97}
+                    textHeight={28}
+                  />
+                </div>
+
+                {/* Second Row - Telegram Channel Box */}
+                <div style={{ marginBottom: 16 }}>
+                  <InfoBox
+                    text="کانال رسمی بهلند: https://t.me/BehLand_Official"
+                    iconSrc="/Img/letter.png"
+                    iconAlt="Telegram Channel"
+                    width={600}
+                    height={80}
+                    textWidth={500}
+                    textHeight={28}
+                  />
+                </div>
+              </div>
             </div>
           </section>
+          </div>
+
+          {/* Right Side - Decorative Pictures */}
+          <div className="flex-1 flex items-center justify-center" style={{ maxWidth: 500 }}>
+            <div className="relative">
+              {/* Decorative elements can be added here later */}
+            </div>
+          </div>
         </div>
       </div>
     </main>
