@@ -55,7 +55,7 @@ export default function Home() {
           >
             <div className="p-6 sm:p-8">
               {/* Hero Title - Right aligned, single line */}
-              <div className="flex justify-end mb-6">
+              <div className="flex justify-start mb-6">
                 <h1
                   style={{
                     width: 323,
@@ -69,7 +69,7 @@ export default function Home() {
                     color: "#CC6D14",
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "flex-end",
+                    justifyContent: "flex-start",
                     whiteSpace: "nowrap",
                     opacity: 1
                   }}
