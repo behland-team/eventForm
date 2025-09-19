@@ -6,8 +6,7 @@ interface InfoBoxProps {
   iconAlt: string;
   width?: number;
   height?: number;
-  textWidth?: number;
-  textHeight?: number;
+  link?: string;
 }
 
 export default function InfoBox({
@@ -16,8 +15,7 @@ export default function InfoBox({
   iconAlt,
   width = 396,
   height = 80,
-  textWidth = 293,
-  textHeight = 28
+  link
 }: InfoBoxProps) {
   return (
     <div
@@ -34,41 +32,69 @@ export default function InfoBox({
         marginBottom: 16
       }}
     >
+      {/* Right side - Icon and Text */}
       <div
         style={{
-          width: 48,
-          height: 48,
           display: "flex",
           alignItems: "center",
-          justifyContent: "center"
-        }}
-      >
-        <Image
-          src={iconSrc}
-          alt={iconAlt}
-          width={48}
-          height={48}
-          style={{ width: "100%", height: "auto" }}
-        />
-      </div>
-      <div
-        style={{
-          width: textWidth,
-          height: textHeight,
-          fontFamily: "var(--font-vazirmatn)",
-          fontWeight: 600,
-          fontSize: 18,
-          lineHeight: "100%",
-          letterSpacing: "0%",
-          textAlign: "right",
-          color: "#000000",
-          display: "flex",
-          alignItems: "center",
+          gap: 12,
+          flex: link ? 0 : 1,
           justifyContent: "flex-end"
         }}
       >
-        {text}
+        <div
+          style={{
+            width: 48,
+            height: 48,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexShrink: 0
+          }}
+        >
+          <Image
+            src={iconSrc}
+            alt={iconAlt}
+            width={48}
+            height={48}
+            style={{ width: "100%", height: "auto" }}
+          />
+        </div>
+        <span
+          style={{
+            fontFamily: "var(--font-vazirmatn)",
+            fontWeight: 600,
+            fontSize: 18,
+            lineHeight: "100%",
+            letterSpacing: "0%",
+            color: "#000000",
+            whiteSpace: "nowrap"
+          }}
+        >
+          {text}
+        </span>
       </div>
+      
+      {/* Left side - Link */}
+      {link && (
+        <div style={{ flex: 1, textAlign: "left" }}>
+          <a 
+            href={link} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ 
+              color: "#007bff", 
+              textDecoration: "none",
+              fontFamily: "var(--font-vazirmatn)",
+              fontWeight: 600,
+              fontSize: 18,
+              lineHeight: "100%"
+            }}
+          >
+            {link}
+          </a>
+        </div>
+      )}
     </div>
   );
 }

@@ -3,21 +3,27 @@ import InfoBox from "@/components/InfoBox";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#FFF6EC] py-10">
-      <div className="container-safe">
-        <div className="mx-auto flex gap-8" style={{ maxWidth: 1200 }}>
-          {/* Left Side - Event Information Tables */}
-          <div className="flex-1" style={{ maxWidth: 500 }}>
-          {/* Hourglass image, top left, as in Figma */}
+    <main style={{ height: "100vh", background: "#FFF6EC", overflow: "hidden" }}>
+      <div style={{ display: "flex", height: "100vh" }}>
+        {/* Left Side - Decorative Pictures */}
+        <div style={{ flex: 1, minWidth: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div className="relative">
+            {/* Decorative elements can be added here later */}
+          </div>
+        </div>
+
+        {/* Right Side - Event Information Tables */}
+        <div style={{ width: 720, minWidth: 720, display: "flex", alignItems: "center", justifyContent: "center", position: "relative", marginLeft: 250 }}>
+          {/* Hourglass image, repositioned for right side */}
           <div
             style={{
               position: "absolute",
               width: 118.69,
               height: 175.66,
-              top: -60,
-              left: -60,
+              top: 32,
+              right: -80,
               zIndex: 10,
-              transform: "rotate(-28.58deg) scaleX(-1)",
+              transform: "rotate(-28.58deg)",
               opacity: 1,
               display: "flex",
               alignItems: "flex-start",
@@ -35,13 +41,16 @@ export default function Home() {
           </div>
 
           <section
-            style={{ 
+            style={{
               width: 696,
               height: 799,
               borderRadius: 16,
               background: "#FEECD8",
               boxShadow: "0px 0px 7px 0px #00000040",
-              position: "relative"
+              position: "relative",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "flex-start"
             }}
           >
             <div className="p-6 sm:p-8">
@@ -83,7 +92,7 @@ export default function Home() {
 
               <hr
                 className="mt-6 border-dashed"
-                style={{ width: 600, borderColor: "#4D4D4D61", borderWidth: 1, borderStyle: "dashed" as const }}
+                style={{ width: 600, borderColor: "#4D4D4D61", borderWidth: 1, borderStyle: "dashed" }}
               />
 
               <div className="mt-4 flex items-center justify-between" style={{ width: 600 }}>
@@ -112,10 +121,7 @@ export default function Home() {
                     iconAlt="Calendar"
                     width={396}
                     height={80}
-                    textWidth={293}
-                    textHeight={28}
                   />
-                  
                   {/* Time Info Box */}
                   <InfoBox
                     text="ساعت ۶ عصر"
@@ -123,34 +129,33 @@ export default function Home() {
                     iconAlt="Clock"
                     width={188}
                     height={80}
-                    textWidth={97}
-                    textHeight={28}
                   />
                 </div>
-
                 {/* Second Row - Telegram Channel Box */}
                 <div style={{ marginBottom: 16 }}>
                   <InfoBox
-                    text="کانال رسمی بهلند: https://t.me/BehLand_Official"
+                    text="کانال رسمی بهلند"
                     iconSrc="/Img/letter.png"
                     iconAlt="Telegram Channel"
                     width={600}
                     height={80}
-                    textWidth={500}
-                    textHeight={28}
+                    link="https://t.me/BehLand_Official"
+                  />
+                </div>
+                {/* Third Row - Website Box */}
+                <div style={{ marginBottom: 16 }}>
+                  <InfoBox
+                    text="وب‌سایت بهلند"
+                    iconSrc="/Img/Browser.png"
+                    iconAlt="Website"
+                    width={600}
+                    height={80}
+                    link="https://beh.land"
                   />
                 </div>
               </div>
             </div>
           </section>
-          </div>
-
-          {/* Right Side - Decorative Pictures */}
-          <div className="flex-1 flex items-center justify-center" style={{ maxWidth: 500 }}>
-            <div className="relative">
-              {/* Decorative elements can be added here later */}
-            </div>
-          </div>
         </div>
       </div>
     </main>
