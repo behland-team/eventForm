@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import InfoBox from "@/components/InfoBox";
 
@@ -14,16 +16,16 @@ export default function Home() {
 
         {/* Right Side - Event Information Tables */}
         <div style={{ width: 720, minWidth: 720, display: "flex", alignItems: "center", justifyContent: "center", position: "relative", marginLeft: 250 }}>
-          {/* Hourglass image, repositioned for right side */}
+          {/* Hourglass image, repositioned to match reference */}
           <div
             style={{
               position: "absolute",
               width: 118.69,
               height: 175.66,
-              top: 32,
-              right: -80,
+              top: -10,
+              left: -60,
               zIndex: 10,
-              transform: "rotate(-28.58deg)",
+              transform: "rotate(-15deg)",
               opacity: 1,
               display: "flex",
               alignItems: "flex-start",
@@ -152,6 +154,48 @@ export default function Home() {
                     height={80}
                     link="https://beh.land"
                   />
+                </div>
+
+                {/* Registration Button */}
+                <div style={{ marginBottom: 16 }}>
+                  <button
+                    style={{
+                      width: 600,
+                      height: 56,
+                      borderRadius: 8,
+                      border: "2px solid #BD5300",
+                      background: "#FFF9F3",
+                      boxShadow: "0px 4px 0px 0px #CC6D14",
+                      padding: "8px 24px",
+                      gap: 8,
+                      fontFamily: "var(--font-yekan-bakh)",
+                      fontWeight: 600,
+                      fontSize: 20,
+                      lineHeight: "100%",
+                      letterSpacing: "0%",
+                      textAlign: "center",
+                      color: "#BD5300",
+                      cursor: "pointer",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      transition: "all 0.2s ease"
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = "translateY(2px)";
+                      e.currentTarget.style.boxShadow = "0px 2px 0px 0px #CC6D14";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "translateY(0px)";
+                      e.currentTarget.style.boxShadow = "0px 4px 0px 0px #CC6D14";
+                    }}
+                    onClick={() => {
+                      // TODO: Navigate to registration form page
+                      console.log("Navigate to registration form");
+                    }}
+                  >
+                    ثبت نام در رویداد
+                  </button>
                 </div>
               </div>
             </div>
