@@ -17,79 +17,48 @@ export default function InfoBox({
   height = 80,
   link
 }: InfoBoxProps) {
+  // Convert width to Tailwind classes
+  const getWidthClass = (w: number) => {
+    if (w === 696) return 'w-[43.5rem]';
+    if (w === 600) return 'w-[37.5rem]';
+    if (w === 396) return 'w-[24.75rem]';
+    if (w === 188) return 'w-[11.75rem]';
+    return `w-[${w}px]`;
+  };
+
+  const getHeightClass = (h: number) => {
+    if (h === 80) return 'h-20';
+    return `h-[${h}px]`;
+  };
+
   return (
     <div
-      style={{
-        width,
-        height,
-        borderRadius: 8,
-        background: "#FFFFFF",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        padding: "16px 20px",
-        boxShadow: "0px 2px 8px rgba(0, 0, 0, 0.1)",
-        marginBottom: 16
-      }}
+      className={`rounded-lg bg-white flex items-center justify-between p-4 lg:px-5 shadow-lg ${getWidthClass(width)} ${getHeightClass(height)}`}
     >
       {/* Right side - Icon and Text */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 12,
-          flex: link ? 0 : 1,
-          justifyContent: "flex-end"
-        }}
-      >
-        <div
-          style={{
-            width: 48,
-            height: 48,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexShrink: 0
-          }}
-        >
+      <div className={`flex items-center gap-3 ${link ? 'flex-none' : 'flex-1'} justify-end`}>
+        <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
           <Image
             src={iconSrc}
             alt={iconAlt}
             width={48}
             height={48}
-            style={{ width: "100%", height: "auto" }}
+            className="w-full h-auto"
           />
         </div>
-        <span
-          style={{
-            fontFamily: "var(--font-vazirmatn)",
-            fontWeight: 600,
-            fontSize: 18,
-            lineHeight: "100%",
-            letterSpacing: "0%",
-            color: "#000000",
-            whiteSpace: "nowrap"
-          }}
-        >
+        <span className="font-lalezar font-semibold text-lg leading-none text-black whitespace-nowrap">
           {text}
         </span>
       </div>
       
       {/* Left side - Link */}
       {link && (
-        <div style={{ flex: 1, textAlign: "left" }}>
+        <div className="flex-1 text-left">
           <a 
             href={link} 
             target="_blank" 
             rel="noopener noreferrer"
-            style={{ 
-              color: "#007bff", 
-              textDecoration: "none",
-              fontFamily: "var(--font-vazirmatn)",
-              fontWeight: 600,
-              fontSize: 18,
-              lineHeight: "100%"
-            }}
+            className="text-blue-600 no-underline font-lalezar font-semibold text-lg leading-none hover:text-blue-800 transition-colors"
           >
             {link}
           </a>
