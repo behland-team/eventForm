@@ -23,6 +23,13 @@ const lalezar = Lalezar({
   subsets: ["arabic"],
 });
 
+// Yekan Bakh font (using Vazirmatn as fallback since Yekan Bakh might not be available on Google Fonts)
+const yekanBakh = Vazirmatn({
+  variable: "--font-yekan-bakh",
+  weight: "600",
+  subsets: ["arabic"],
+});
+
 export const metadata: Metadata = {
   title: "بهلند | رویداد پرسش و پاسخ",
   description: "فرم ثبت‌نام و معرفی رویداد",
@@ -36,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${vazirmatn.variable} ${lalezar.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${vazirmatn.variable} ${lalezar.variable} ${yekanBakh.variable} antialiased`}
       >
         {children}
       </body>
