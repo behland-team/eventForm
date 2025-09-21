@@ -20,7 +20,9 @@ export default function Home() {
     return null;
   }
 
-  return isMobile ? <MobileView /> : <DesktopView />;
+  return (
+    <div className="min-h-screen bg-[#FFF6EC]">
+      {isMobile ? <MobileView /> : <DesktopView />}
+    </div>
+  );
 }
-
-

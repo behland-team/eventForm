@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals-new.css";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "بهلند | رویداد پرسش و پاسخ",
