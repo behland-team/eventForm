@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -45,7 +44,7 @@ export default function FormPage() {
                         id="fullName"
                         name="fullName"
                         type="text"
-                        className="w-full h-[48px] px-6 py-3 rounded-lg border border-[#989898] bg-[#FFF9F3] font-[var(--font-vazirmatn)] text-[14px] text-right dir-rtl text-[#292929] placeholder:text-[#999999] focus:outline-none focus:border-[#CC6D14]"
+                        className="text-center placeholder:text-center w-full h-[48px] px-6 py-3 rounded-lg border border-[#989898] bg-[#FFF9F3] font-[var(--font-vazirmatn)] text-[14px] text-right dir-rtl text-[#292929] placeholder:text-[#999999] focus:outline-none focus:border-[#CC6D14]"
                         placeholder="نام و نام خانوادگی"
                         required
                       />
@@ -60,7 +59,7 @@ export default function FormPage() {
                         id="email"
                         name="email"
                         type="email"
-                        className="w-full h-[48px] px-6 py-3 rounded-lg border border-[#989898] bg-[#FFF9F3] font-[var(--font-vazirmatn)] text-[14px] text-right dir-rtl text-[#292929] placeholder:text-[#999999] focus:outline-none focus:border-[#CC6D14]"
+                        className="text-center placeholder:text-center w-full h-[48px] px-6 py-3 rounded-lg border border-[#989898] bg-[#FFF9F3] font-[var(--font-vazirmatn)] text-[14px] text-right dir-rtl text-[#292929] placeholder:text-[#999999] focus:outline-none focus:border-[#CC6D14]"
                         placeholder="آدرس ایمیل"
                         required
                       />
@@ -78,7 +77,7 @@ export default function FormPage() {
                         id="phone"
                         name="phone"
                         type="tel"
-                        className="w-full h-[48px] px-6 py-3 rounded-lg border border-[#989898] bg-[#FFF9F3] font-[var(--font-vazirmatn)] text-[14px] text-right dir-rtl text-[#292929] placeholder:text-[#999999] focus:outline-none focus:border-[#CC6D14]"
+                        className="text-center placeholder:text-center w-full h-[48px] px-6 py-3 rounded-lg border border-[#989898] bg-[#FFF9F3] font-[var(--font-vazirmatn)] text-[14px] text-right dir-rtl text-[#292929] placeholder:text-[#999999] focus:outline-none focus:border-[#CC6D14]"
                         placeholder="شماره تلفن"
                       />
                     </div>
@@ -89,7 +88,7 @@ export default function FormPage() {
                         id="telegramId"
                         name="telegramId"
                         type="text"
-                        className="w-full h-[48px] px-6 py-3 rounded-lg border border-[#989898] bg-[#FFF9F3] font-[var(--font-vazirmatn)] text-[14px] text-right dir-rtl text-[#292929] placeholder:text-[#999999] focus:outline-none focus:border-[#CC6D14]"
+                        className="text-center placeholder:text-center w-full h-[48px] px-6 py-3 rounded-lg border border-[#989898] bg-[#FFF9F3] font-[var(--font-vazirmatn)] text-[14px] text-right dir-rtl text-[#292929] placeholder:text-[#999999] focus:outline-none focus:border-[#CC6D14]"
                         placeholder="آی دی تلگرام"
                       />
                     </div>
@@ -151,4 +150,3 @@ export default function FormPage() {
       </div>
     </main>
   );
-}
