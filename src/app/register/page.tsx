@@ -49,28 +49,28 @@ export default function FormPage() {
     <main className="min-h-screen bg-white flex items-center justify-center p-4">
       <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-20 w-full max-w-6xl">
         
-        {/* Form Container - طبق مشخصات Figma */}
+        {/* Form Container */}
         <div className="order-1 lg:order-1 flex-shrink-0">
-          <div className="w-full max-w-md lg:w-[673px] lg:h-[798px] rounded-[16px] bg-[#FEECD8] shadow-[0px_0px_7px_0px_#00000040] opacity-100 flex items-center justify-center">
+          <div className="w-full max-w-md lg:w-[800px] lg:h-[900px] rounded-[16px] bg-[#FEECD8] shadow-[0px_0px_7px_0px_#00000040] opacity-100 flex items-center justify-center">
 
-            {/* Form Content Container - طبق مشخصات Figma */}
-            <div className="w-full lg:w-[673px] lg:h-[716px] rounded-[8px] opacity-100 p-6 lg:p-8">
+            {/* Form Content Container */}
+            <div className="w-full lg:w-[750px] lg:h-[850px] rounded-[8px] opacity-100 p-6 lg:p-10 bg-white">
 
-              {/* Title - طبق مشخصات Figma */}
-              <h1 className="font-lalezar font-normal text-[32px] lg:text-[48px] leading-tight text-right text-[#CC6D14] mb-4">
+              {/* Title */}
+              <h1 className="font-lalezar font-normal text-[32px] lg:text-[48px] leading-tight text-right text-[#CC6D14] mb-6 lg:mb-8">
                 فرم ثبت نام در رویداد
               </h1>
 
               {/* Description */}
-              <p className="font-[var(--font-vazirmatn)] font-medium text-[14px] lg:text-[16px] leading-relaxed text-justify text-[#292929] mb-6">
+              <p className="font-[var(--font-vazirmatn)] font-medium text-[14px] lg:text-[16px] leading-relaxed text-justify text-[#292929] mb-8 lg:mb-10">
                 این رویداد فرصتی ارزشمند برای یادگیری و تبادل تجربه است.
                 با تکمیل فرم زیر، هم حضور خود را ثبت می‌کنید و هم می‌توانید سوالاتی که دوست دارید مطرح شوند را با ما در میان بگذارید. منتظر همراهی گرم شما هستیم.
               </p>
 
               {/* Form */}
               <form onSubmit={handleSubmit(onSubmit)} className="w-full">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-3 mb-5">
-                  {/* Full Name - طبق مشخصات Figma */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 mb-8">
+                  {/* Full Name */}
                   <div className="relative">
                     <input
                       id="fullName"
@@ -89,7 +89,7 @@ export default function FormPage() {
                     )}
                   </div>
 
-                  {/* Email - طبق مشخصات Figma */}
+                  {/* Email */}
                   <div className="relative">
                     <input
                       id="email"
@@ -108,7 +108,7 @@ export default function FormPage() {
                     )}
                   </div>
 
-                  {/* Phone - طبق مشخصات Figma */}
+                  {/* Phone */}
                   <div>
                     <input
                       id="phone"
@@ -119,7 +119,7 @@ export default function FormPage() {
                     />
                   </div>
 
-                  {/* Telegram ID - طبق مشخصات Figma */}
+                  {/* Telegram ID */}
                   <div>
                     <input
                       id="telegramId"
@@ -132,8 +132,8 @@ export default function FormPage() {
                 </div>
 
                 {/* Questions Section */}
-                <div className="mb-6">
-                  <p className="font-[var(--font-vazirmatn)] font-medium text-[14px] text-right text-[#292929] mb-4">
+                <div className="mb-8">
+                  <p className="font-[var(--font-vazirmatn)] font-medium text-[14px] text-right text-[#292929] mb-6">
                     سوالاتتون رو میتونین از طریق باکس زیر مطرح کنید.
                   </p>
                   
@@ -159,7 +159,7 @@ export default function FormPage() {
                 </div>
 
                 {/* Submit Button */}
-                <div className="flex items-center justify-center mt-8">
+                <div className="flex items-center justify-center mt-10 lg:mt-12">
                   <button
                     type="submit"
                     disabled={isSubmitting}
@@ -174,7 +174,7 @@ export default function FormPage() {
           </div>
         </div>
 
-        {/* Checklist Image - طبق مشخصات Figma */}
+        {/* Checklist Image*/}
         <div className="order-2 lg:order-2 flex-shrink-0">
           <div className="w-full max-w-sm lg:w-[579px] lg:h-[783.66px]">
             <Image 
