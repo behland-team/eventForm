@@ -94,7 +94,7 @@ export default function FormPage() {
                     </div>
                   </div>
                 </div>
-               <div className="h-25" />
+                <div className="h-25" />
                 {/* Questions Section */}
                 <div className="mb-5 w-full max-w-2xl">
                   <p className="font-[var(--font-vazirmatn)] font-medium text-[14px] text-right text-[#292929] mb-3">
@@ -136,17 +136,18 @@ export default function FormPage() {
         {/* Checklist Image*/}
         <div className="order-2 lg:order-2 flex-shrink-0">
           <div className="w-full max-w-sm lg:w-[579px] lg:h-[783.66px]">
-            <Image 
-              src="/Img/Checklist.png" 
-              alt="Checklist Illustration" 
-              width={579} 
-              height={783.66} 
+            <Image
+              src="/Img/Checklist.png"
+              alt="Checklist Illustration"
+              width={579}
+              height={783.66}
               className="w-full lg:w-[579px] lg:h-[783.66px] object-contain opacity-100"
-              priority 
+              priority
             />
           </div>
         </div>
         
       </div>
     </main>
-  );
+  )
+}
