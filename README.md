@@ -38,3 +38,9 @@ Tech
 - Tailwind CSS v4
 - React Hook Form + Zod
 # eventForm
+
+const res = await fetch("/api/register", {
+method: "POST",
+headers: { "Content-Type": "application/json" },
+body: JSON.stringify(values),
+});
