@@ -64,7 +64,7 @@ export default function Home() {
                         </div>
                         <div className="flex items-stretch sm:items-center gap-4 justify-between">
                             <div
-                                className="sm:w-full   rounded-lg bg-white flex items-center justify-center p-4 shadow-lg w-1/2 ">
+                                className="sm:w-full   rounded-lg bg-white flex items-center max-md:justify-center p-4 shadow-lg w-1/2 ">
                                 <div className="flex items-center flex-col sm:flex-row  gap-2 ">
                                     <div
                                         className="w-12 h-12 flex items-center justify-center flex-shrink-0">

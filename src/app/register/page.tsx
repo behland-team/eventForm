@@ -6,16 +6,17 @@ import Banner from "@/assets/form-Banner.svg"
 import {useForm} from "react-hook-form";
 import {z} from "zod";
 import {zodResolver} from "@hookform/resolvers/zod";
+import {toast} from "react-toastify";
 
 const FormSchema = z.object({
     fullName: z
-        .string("وارد کردن فیلد نام الزامیست")
+        .string()
         .min(2, "نام باید حداقل 2 کاراکتر باشد")
         .max(80, "نام خیلی طولانی است"),
     email: z.email("ایمیل معتبر وارد کنید"),
-    phone: z.string().optional(),
+    phone: z.string().nonempty("وارد کردن شما موبایل الزامیست"),
     telegramId: z.string().optional(),
-    question: z
+    questions: z
         .string()
         .max(600, "سوال شما باید کمتر از 600 کاراکتر باشد")
         .optional(),
@@ -32,8 +33,25 @@ export default function FormPage() {
     } = useForm<FormValues>({resolver: zodResolver(FormSchema), mode: "onBlur"});
 
 
-    const submitForm = (data: FormValues) => {
-        console.log(data)
+    const submitForm = async (data: FormValues) => {
+        try {
+            const response = await fetch("/api/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+            console.log(data);
+            if (!response.ok) {
+                throw new Error("مشکلی پیش آمده لطفا دوباره تلاش کنید")
+            }
+            toast.success("مشتاق دیدار شما هستیم...")
+            reset()
+        } catch (error: any) {
+            toast.error((error?.message) as string);
+        }
+
         // API Place
     };
 
@@ -110,6 +128,11 @@ export default function FormPage() {
                                                 placeholder="شماره تلفن"
                                                 {...register("phone")}
                                             />
+                                            {errors.phone && (
+                                                <p className="text-red-500 text-sm mt-1 font-[var(--font-yekan-bakh)]">
+                                                    {errors.phone.message}
+                                                </p>
+                                            )}
                                         </div>
 
                                         {/* Telegram ID */}
@@ -136,12 +159,12 @@ export default function FormPage() {
                         rows={5}
                         className="w-full  px-4 py-3 rounded-lg border-0 bg-transparent text-[14px] text-right dir-rtl resize-none text-[#292929] placeholder:text-[#999999] focus:outline-none"
                         placeholder="سوالات شما..."
-                        {...register("question")}
+                        {...register("questions")}
                     />
                                     </div>
-                                    {errors.question && (
+                                    {errors.questions && (
                                         <p className="text-red-500 text-sm mt-1 font-[var(--font-yekan-bakh)]">
-                                            {errors.question.message}
+                                            {errors.questions.message}
                                         </p>
                                     )}
                                     <button
