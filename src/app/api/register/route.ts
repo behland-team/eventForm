@@ -1,7 +1,6 @@
 import { prisma } from "@/lib/prisma";
 
 export async function OPTIONS(req: Request) {
-  const origin = req.headers.get("origin");
   return new Response(null, {
     status: 200,
     headers: {
