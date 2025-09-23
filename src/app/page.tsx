@@ -73,7 +73,7 @@ export default function Home() {
                                     </div>
                                     <div
                                         className="font-lalezar text-sm lg:text-lg leading-none text-center sm:text-right text-black">
-                                        جمعه 4 مهرماه
+                                        جمعه ۴ مهرماه
                                         <br/>
                                         <span className="text-xs sm:text-sm"> ۱۴۰۴ (۲۶ سپتامبر ۲۰۲۵) </span>
                                     </div>
