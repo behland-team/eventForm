@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Banner from "@/assets/event.svg";
+import Banner from "@/assets/event.webp";
 import MobileBanner from "@/assets/event-banner-mobile.svg";
 import Link from "next/link";
 
@@ -15,7 +15,7 @@ export default function Home() {
             height={799}
             className="w-full h-full object-cover rounded-2xl hidden md:block"
             priority
-            quality={75}
+                 quality={60}
           />
           <Image
             src={MobileBanner.src}
@@ -24,7 +24,7 @@ export default function Home() {
             height={500}
             className="absolute w-full h-auto  z-20 lg:hidden -top-20"
             priority
-            quality={75}
+                 quality={60}
           />
         </div>
 
@@ -38,7 +38,7 @@ export default function Home() {
               height={152}
               className="w-full h-auto"
               priority
-              quality={75}
+                   quality={60}
             />
           </div>
           <div className="flex flex-col gap-4">
@@ -82,7 +82,7 @@ export default function Home() {
                       width={48}
                       height={48}
                       className="w-full h-auto"
-                      quality={75}
+                           quality={60}
                     />
                   </div>
                   <div className="font-lalezar text-sm lg:text-lg leading-none text-center sm:text-right text-black">
@@ -104,7 +104,7 @@ export default function Home() {
                       width={48}
                       height={48}
                       className="w-full h-auto"
-                      quality={75}
+                           quality={60}
                     />
                   </div>
                   <div className="font-lalezar text-sm lg:text-lg leading-none text-center sm:text-right text-black whitespace-nowrap">
@@ -127,7 +127,7 @@ export default function Home() {
                       width={48}
                       height={48}
                       className="w-full h-auto"
-                      quality={75}
+                           quality={60}
                     />
                   </div>
                   <span className="font-lalezar text-sm lg:text-lg leading-none text-black whitespace-nowrap">
@@ -157,7 +157,7 @@ export default function Home() {
                       width={48}
                       height={48}
                       className="w-full h-auto"
-                      quality={75}
+                           quality={60}
                     />
                   </div>
                   <span className="font-lalezar text-sm lg:text-lg leading-none text-black whitespace-nowrap">
