@@ -1,0 +1,19 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"  
+  url      = env("DATABASE_URL")
+}
+
+model EventRegistration {
+  id          Int      @id @default(autoincrement())
+  fullName    String
+  email       String   @unique
+  phone       String
+  telegramId  String?
+  questions   String?
+  createdAt   DateTime @default(now())
+}
