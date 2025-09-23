@@ -13,8 +13,8 @@ const FormSchema = z.object({
     .min(2, "نام باید حداقل 2 کاراکتر باشد")
     .max(80, "نام خیلی طولانی است"),
   email: z.email("ایمیل معتبر وارد کنید"),
-    telegramId: z.string().optional(),
-  phone:z.string().optional(),
+  telegramId: z.string().optional(),
+  phone: z.string().optional(),
   questions: z
     .string()
     .max(700, "سوال شما باید کمتر از 700 کاراکتر باشد")
@@ -132,6 +132,7 @@ export default function FormPage() {
                         type="tel"
                         className=" w-full px-6 py-3 rounded-lg border border-[#989898] bg-[#FFF9F3] text-[14px] text-right dir-rtl text-[#292929] placeholder:text-[#999999] focus:outline-none focus:border-[#CC6D14]"
                         placeholder="شماره تلفن"
+                        {...register("phone")}
                       />
                     </div>
 
