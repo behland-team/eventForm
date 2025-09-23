@@ -67,10 +67,10 @@ export default function FormPage() {
                         {/* Form Content Container */}
                         <div className="w-full  flex flex-col gap-4">
                             {/* Title */}
-                            <h1 className="font-lalezar font-normal text-[32px] lg:text-[40px] leading-tight text-right text-[#CC6D14] ">
+                            <h1 className="font-lalezar font-bold text-[32px] lg:text-[40px] leading-tight text-right text-[#CC6D14] ">
                                 فرم ثبت نام در رویداد
                             </h1>
-                            <p className="text-sm lg:text-base leading-relaxed text-justify text-[#292929]">
+                            <p className="text-sm lg:text-base leading-relaxed font-semibold text-justify text-[#292929]">
                                 این رویداد فرصتی ارزشمند برای یادگیری و تبادل تجربه است.
                                 با تکمیل فرم زیر، هم حضور خود را ثبت می‌کنید و هم می‌توانید سوالاتی که دوست دارید مطرح
                                 شوند را با ما در میان بگذارید. منتظر همراهی گرم شما هستیم.
@@ -149,7 +149,7 @@ export default function FormPage() {
                                 </div>
                                 {/* Questions Section */}
                                 <div className="w-full space-y-6">
-                                    <p className="text-[14px] text-right text-[#292929]  ">
+                                    <p className="text-[14px] text-right font-bold text-[#292929]  ">
                                         سوالاتتون رو میتونین از طریق باکس زیر مطرح کنید.
                                     </p>
 
@@ -170,7 +170,7 @@ export default function FormPage() {
                                     <button
                                         type="submit"
                                         disabled={isSubmitting}
-                                        className="py-3 px-8 mr-auto rounded-lg bg-[#FFF9F3] border-2 border-[#BD5300] shadow-[0px_4px_0px_0px_#CC6D14]  text-[16px] text-[#BD5300] cursor-pointer transition-all duration-200 ease-in-out flex items-center justify-center hover:translate-y-0.5 hover:shadow-[0px_2px_0px_0px_#CC6D14] active:translate-y-1 active:shadow-none"
+                                        className="py-3 px-8 font-bold mr-auto rounded-lg bg-[#FFF9F3] border-2 border-[#BD5300] shadow-[0px_4px_0px_0px_#CC6D14]  text-[16px] text-[#BD5300] cursor-pointer transition-all duration-200 ease-in-out flex items-center justify-center hover:translate-y-0.5 hover:shadow-[0px_2px_0px_0px_#CC6D14] active:translate-y-1 active:shadow-none"
                                     >
                                         ثبت اطلاعات
                                     </button>

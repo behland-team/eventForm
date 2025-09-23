@@ -37,10 +37,10 @@ export default function Home() {
                                className="w-full h-auto" priority/>
                     </div>
                     <div className="flex flex-col gap-4">
-                        <h1 className="font-lalezar font-normal text-4xl leading-tight text-right text-[#CC6D14]">
+                        <h1 className=" font-bold text-4xl leading-tight text-right text-[#CC6D14]">
                             همراهان عزیز بهلند!
                         </h1>
-                        <p className="text-[#292929] text-justify font-lalezar text-sm md:text-lg  lg:text-xl leading-[2.5rem] font-medium">
+                        <p className="text-[#292929] text-justify  text-sm md:text-lg  lg:text-xl leading-[2.5rem] font-medium">
                             اولین جلسه‌ی پرسش و پاسخ (Ask Anything) در راه است.
                             <br/>
                             این رویداد فرصتی است برای اینکه تمام پرسش‌هایتان درباره‌ی مسیر یادگیری، اقتصاد توکنی و

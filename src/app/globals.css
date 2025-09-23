@@ -1,12 +1,6 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'Lalezar';
-  src: url('/fonts/Lalezar-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+
 
 :root {
   --background: #ffffff;
@@ -33,13 +27,11 @@ html {
 body {
   background: #FFF6EC;
   color: #171717;
-  font-family: 'Lalezar', sans-serif;
+  font-family: 'kalameh', sans-serif;
 }
 
 /* Font utility class */
-.font-lalezar {
-  font-family: 'Lalezar', sans-serif !important;
-}
+
 
 /* RTL Support */
 .dir-rtl {
@@ -48,4 +40,77 @@ body {
 
 @theme {
     --breakpoint-xs: 440px;
+}
+
+
+@font-face {
+  font-family: 'kalameh';
+  src: url('../assets/fonts/KalamehWeb-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'kalameh';
+  src: url('../assets/fonts/KalamehWeb-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'kalameh';
+  src: url('../assets/fonts/KalamehWeb-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'kalameh';
+  src: url('../assets/fonts/KalamehWeb-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'kalameh';
+  src: url('../assets/fonts/KalamehWeb-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'kalameh';
+  src: url('../assets/fonts/KalamehWeb-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'kalameh';
+  src: url('../assets/fonts/KalamehWeb-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'kalameh';
+  src: url('../assets/fonts/KalamehWeb-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'kalameh';
+  src: url('../assets/fonts/KalamehWeb-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
