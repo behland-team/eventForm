@@ -13,7 +13,8 @@ const FormSchema = z.object({
     .min(2, "نام باید حداقل 2 کاراکتر باشد")
     .max(80, "نام خیلی طولانی است"),
   email: z.email("ایمیل معتبر وارد کنید"),
-  telegramId: z.string().optional(),
+    telegramId: z.string().optional(),
+  phone:z.string().optional(),
   questions: z
     .string()
     .max(700, "سوال شما باید کمتر از 700 کاراکتر باشد")
