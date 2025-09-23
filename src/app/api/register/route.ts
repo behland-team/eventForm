@@ -1,6 +1,6 @@
 import { prisma } from "@/lib/prisma";
 
-export async function OPTIONS(req: Request) {
+export async function OPTIONS() {
   return new Response(null, {
     status: 200,
     headers: {
