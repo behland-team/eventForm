@@ -191,6 +191,7 @@ export default function FormPage() {
             height={783.66}
             className="max-sm:absolute max-sm:-top-32 object-contain opacity-100"
             priority
+            quality={75}
           />
         </div>
       </div>
