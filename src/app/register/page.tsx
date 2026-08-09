@@ -62,18 +62,31 @@ export default function FormPage() {
   };
 
   return (
-    <main className="lg:h-screen bg-white flex items-center justify-center p-4">
+    <main className="lg:h-screen bg-[#F0F4F9] flex items-center justify-center p-4">
       <div className="flex flex-col lg:flex-row items-center justify-center gap-8  w-full max-w-[75rem] mx-auto">
         {/* Form Container */}
         <div className="lg:w-1/2">
-          <div className="w-full flex flex-col gap-12  rounded-[16px] bg-[#FEECD8] shadow-[0px_0px_7px_0px_#00000040]  p-6 max-sm:pb-32">
+          <div className="w-full flex flex-col gap-12  rounded-[16px] bg-white shadow-[0px_0px_11px_0px_#00000025]  p-6 max-sm:pb-32 relative">
+            <div className="absolute size-12 left-2 -top-2  md:w-[6.5rem] md:h-[9.5rem] md:-top-[1rem] md:left-[1.5rem] z-10 opacity-100 flex items-start justify-start">
+              <Image
+                  src="/Img/icon.svg"
+                  alt="Behland"
+                  width={169}
+                  height={151}
+                  className="w-full h-auto"
+                  priority
+                  quality={60}
+              />
+            </div>
             {/* Form Content Container */}
             <div className="w-full  flex flex-col gap-4">
               {/* Title */}
-              <h1 className="font-lalezar font-bold text-[32px] lg:text-[40px] leading-tight text-right text-[#CC6D14] ">
-                فرم ثبت نام در رویداد
+              <h1 className="font-lalezar font-bold text-[28px] lg:text-[40px] leading-tight text-right text-[#4D4D4D]">
+                فرم
+                <span className={"text-[#335A92]"}> ثبت نام </span>
+                 در رویداد
               </h1>
-              <p className="text-sm lg:text-base leading-relaxed font-semibold text-justify text-[#292929]">
+              <p className="text-sm lg:text-base leading-relaxed font-semibold text-justify text-[#4D4D4D]">
                 این رویداد فرصتی ارزشمند برای یادگیری و تبادل تجربه است. با
                 تکمیل فرم زیر، هم حضور خود را ثبت می‌کنید و هم می‌توانید سوالاتی
                 که دوست دارید مطرح شوند را با ما در میان بگذارید. منتظر همراهی
@@ -95,7 +108,7 @@ export default function FormPage() {
                       <input
                         id="fullName"
                         type="text"
-                        className=" w-full  px-6 py-3 rounded-lg border border-[#989898] bg-[#FFF9F3] font-[var(--font-vazirmatn)] text-[14px] text-right dir-rtl text-[#292929] placeholder:text-[#999999] focus:outline-none focus:border-[#CC6D14]"
+                        className=" w-full  px-6 py-3 rounded-lg border border-[#F0F4F9] bg-[#F0F4F9] font-[var(--font-vazirmatn)] text-[14px] text-right dir-rtl text-[#292929] placeholder:text-[#999999] focus:outline-none focus:border-[#4071B7]"
                         placeholder="نام و نام خانوادگی"
                         {...register("fullName")}
                       />
@@ -111,7 +124,7 @@ export default function FormPage() {
                       <input
                         id="email"
                         type="text"
-                        className=" w-full h-[48px] px-6 py-3 rounded-lg border border-[#989898] bg-[#FFF9F3] font-[var(--font-vazirmatn)] text-[14px] text-right dir-rtl text-[#292929] placeholder:text-[#999999] focus:outline-none focus:border-[#CC6D14]"
+                        className=" w-full  px-6 py-3 rounded-lg border border-[#F0F4F9] bg-[#F0F4F9] font-[var(--font-vazirmatn)] text-[14px] text-right dir-rtl text-[#292929] placeholder:text-[#999999] focus:outline-none focus:border-[#4071B7]"
                         placeholder="آدرس ایمیل"
                         {...register("email")}
                       />
@@ -130,7 +143,7 @@ export default function FormPage() {
                       <input
                         id="phone"
                         type="tel"
-                        className=" w-full px-6 py-3 rounded-lg border border-[#989898] bg-[#FFF9F3] text-[14px] text-right dir-rtl text-[#292929] placeholder:text-[#999999] focus:outline-none focus:border-[#CC6D14]"
+                        className=" w-full  px-6 py-3 rounded-lg border border-[#F0F4F9] bg-[#F0F4F9] font-[var(--font-vazirmatn)] text-[14px] text-right dir-rtl text-[#292929] placeholder:text-[#999999] focus:outline-none focus:border-[#4071B7]"
                         placeholder="شماره تلفن"
                         {...register("phone")}
                       />
@@ -141,7 +154,7 @@ export default function FormPage() {
                       <input
                         id="telegramId"
                         type="text"
-                        className="  w-full px-6 py-3 rounded-lg border border-[#989898] bg-[#FFF9F3] text-[14px] text-right dir-rtl text-[#292929] placeholder:text-[#999999] focus:outline-none focus:border-[#CC6D14]"
+                        className=" w-full  px-6 py-3 rounded-lg border border-[#F0F4F9] bg-[#F0F4F9] font-[var(--font-vazirmatn)] text-[14px] text-right dir-rtl text-[#292929] placeholder:text-[#999999] focus:outline-none focus:border-[#4071B7]"
                         placeholder="آی دی تلگرام"
                         {...register("telegramId")}
                       />
@@ -154,7 +167,7 @@ export default function FormPage() {
                     سوالاتتون رو میتونین از طریق باکس زیر مطرح کنید.
                   </p>
 
-                  <div className="w-full rounded-lg bg-[#FFF9F3] border border-[#989898]">
+                  <div className="w-full rounded-lg bg-[#F0F4F9] border border-[#F0F4F9] has-focus:border-[#4071B7]">
                     <textarea
                       id="question"
                       rows={5}
@@ -171,7 +184,7 @@ export default function FormPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="py-3 px-8 font-bold mr-auto rounded-lg bg-[#FFF9F3] border-2 border-[#BD5300] shadow-[0px_4px_0px_0px_#CC6D14]  text-[16px] text-[#BD5300] cursor-pointer transition-all duration-200 ease-in-out flex items-center justify-center hover:translate-y-0.5 hover:shadow-[0px_2px_0px_0px_#CC6D14] active:translate-y-1 active:shadow-none"
+                    className="py-2 md:py-3 px-8 font-bold mr-auto rounded-lg bg-[#4071B7] border-2 border-[#335A92] shadow-[0px_4px_0px_0px_#335A92] text-[16px] text-white cursor-pointer transition-all duration-200 ease-in-out flex items-center justify-center hover:translate-y-0.5 hover:shadow-[0px_2px_0px_0px_#335A92] active:translate-y-1 active:shadow-none"
                   >
                     ثبت اطلاعات
                   </button>

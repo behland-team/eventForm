@@ -1,51 +1,42 @@
 import Image from "next/image";
 import Banner from "@/assets/event.webp";
-import MobileBanner from "@/assets/event-banner-mobile.svg";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="lg:h-screen bg-[#FFF6EC] overflow-hidden">
+    <main className="lg:h-screen bg-[#F0F4F9] overflow-hidden">
       <div className="flex flex-col-reverse lg:flex-row h-full lg:justify-center lg:items-center px-5 py-10 sm:px-10 md:px-20 xl:px-28 max-w-[85rem] mx-auto">
-        <div className="lg:w-1/3 xl:w-1/2 relative max-lg:h-75 max-sm:h-56">
+        <div className="lg:w-1/3 xl:w-1/2 relative">
           <Image
             src={Banner.src}
             alt="Full Picture"
             width={696}
             height={799}
-            className="w-full h-full object-cover rounded-2xl hidden md:block"
-            priority
-                 quality={60}
-          />
-          <Image
-            src={MobileBanner.src}
-            alt="Calendar Background"
-            width={500}
-            height={500}
-            className="absolute w-full h-auto  z-20 lg:hidden -top-20"
+            className="w-full h-full object-cover rounded-2xl"
             priority
                  quality={60}
           />
         </div>
 
         {/* Main Card */}
-        <section className="lg:w-2/3 xl:w-1/2 rounded-2xl bg-[#FEECD8] shadow-[0px_0px_7px_0px_#00000040] relative flex flex-col justify-start items-center z-10 px-4 md:px-8 py-6  max-lg:pb-24">
-          <div className="absolute size-20 -top-16 -left-8  md:w-[6.5rem] md:h-[9.5rem] md:-top-[4rem] md:-left-[2.5rem] z-10 -rotate-[15deg] opacity-100 flex items-start justify-start">
+        <section className="lg:w-2/3 xl:w-1/2 rounded-2xl bg-white shadow-[0px_0px_11px_0px_#00000025] relative flex flex-col justify-start items-center z-10 px-4 md:px-8 py-6">
+          <div className="absolute size-12 left-2 -top-2  md:w-[6.5rem] md:h-[9.5rem] md:-top-[1rem] md:left-[1.5rem] z-10 opacity-100 flex items-start justify-start">
             <Image
-              src="/Img/hourglass.png"
-              alt="Hourglass"
-              width={104}
-              height={152}
+              src="/Img/icon.svg"
+              alt="Behland"
+              width={169}
+              height={151}
               className="w-full h-auto"
               priority
                    quality={60}
             />
           </div>
           <div className="flex flex-col gap-4">
-            <h1 className=" font-bold text-4xl leading-tight text-right text-[#CC6D14]">
-              همراهان عزیز بهلند!
+            <h1 className=" font-bold text-2xl md:text-4xl leading-tight text-right text-[#4D4D4D] ">
+              همراهان عزیز
+              <span className={"text-[#4071B7]"}> بهلند! </span>
             </h1>
-            <p className="text-[#292929] text-justify  text-sm md:text-lg  lg:text-xl leading-[2.5rem] font-medium">
+            <p className="text-[#4D4D4D] text-justify  text-sm md:text-lg  lg:text-xl leading-6 md:leading-[2.5rem] font-medium ">
               اولین جلسه‌ی پرسش و پاسخ (Ask Anything) در راه است.
               <br />
               این رویداد فرصتی است برای اینکه تمام پرسش‌هایتان درباره‌ی مسیر
@@ -178,7 +169,7 @@ export default function Home() {
             </div>
             <Link
               href="/register"
-              className="rounded-lg border-2 border-[#BD5300] bg-[#FFF9F3] shadow-[0px_4px_0px_0px_#CC6D14] px-6 py-4 font-lalezar font-semibold text-base leading-none text-[#BD5300] cursor-pointer flex items-center justify-center transition-all duration-200 ease-in-out hover:translate-y-0.5 hover:shadow-[0px_2px_0px_0px_#CC6D14] active:translate-y-1 active:shadow-none  no-underline"
+              className="rounded-lg border-2 border-[#335A92] bg-[#4071B7] px-6 py-4 font-lalezar font-semibold text-base leading-none text-white cursor-pointer flex items-center justify-center transition-all duration-200 ease-in-out hover:translate-y-0.5 shadow-[0px_4px_#335A924] active:translate-y-1 active:shadow-none  no-underline"
             >
               ثبت نام در رویداد
             </Link>
