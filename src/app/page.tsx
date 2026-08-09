@@ -14,7 +14,7 @@ export default function Home() {
             height={799}
             className="w-full h-full object-cover rounded-2xl"
             priority
-                 quality={60}
+            quality={60}
           />
         </div>
 
@@ -28,22 +28,23 @@ export default function Home() {
               height={151}
               className="w-full h-auto"
               priority
-                   quality={60}
+              quality={60}
             />
           </div>
           <div className="flex flex-col gap-4">
             <h1 className=" font-bold text-2xl md:text-4xl leading-tight text-right text-[#4D4D4D] ">
               همراهان عزیز
-              <span className={"text-[#4071B7]"}> بهلند! </span>
+              <span className={"text-[#4071B7]"}> به لند! </span>
             </h1>
             <p className="text-[#4D4D4D] text-justify  text-sm md:text-lg  lg:text-xl leading-6 md:leading-[2.5rem] font-medium ">
-              اولین جلسه‌ی پرسش و پاسخ (Ask Anything) در راه است.
+              دومین جلسه پرسش‌وپاسخ جامعه و سرمایه‌گذاران به‌لند، به مناسبت
+              یک‌سالگی به‌لند و هفته مشارکت اجتماعی، به‌زودی برگزار می‌شود.
               <br />
-              این رویداد فرصتی است برای اینکه تمام پرسش‌هایتان درباره‌ی مسیر
-              یادگیری، اقتصاد توکنی و آینده‌ی بهلند را مطرح کنید.
+              در این رویداد، می‌توانید پرسش‌های خود را درباره مسیر یادگیری، مدل
+              اقتصادی، توکن BEHT و آینده به‌لند مطرح کنید و گزارش یک سال فعالیت،
+              پیشرفت‌ها، چالش‌ها و برنامه‌های پیش‌رو را از تیم به‌لند بشنوید.
             </p>
           </div>
-          {/* Divider - واقعاً وسط! */}
           <hr
             className=" h-4 my-6 w-full border-0 border-t border-dashed border-[#4D4D4D61]"
             style={{
@@ -73,15 +74,15 @@ export default function Home() {
                       width={48}
                       height={48}
                       className="w-full h-auto"
-                           quality={60}
+                      quality={60}
                     />
                   </div>
                   <div className="font-lalezar text-sm lg:text-lg leading-none text-center sm:text-right text-black">
-                    جمعه ۴ مهرماه
+                    جمعه ۲۳ مرداد ماه
                     <br />
                     <span className="text-xs sm:text-sm">
                       {" "}
-                      ۱۴۰۴ (۲۶ سپتامبر ۲۰۲۵){" "}
+                      ۱۴۰۵ (۲۱ اگوست ۲۰۲۶){" "}
                     </span>
                   </div>
                 </div>
@@ -95,11 +96,11 @@ export default function Home() {
                       width={48}
                       height={48}
                       className="w-full h-auto"
-                           quality={60}
+                      quality={60}
                     />
                   </div>
                   <div className="font-lalezar text-sm lg:text-lg leading-none text-center sm:text-right text-black whitespace-nowrap">
-                    <p> ساعت ۶ عصر</p>
+                    <p> ساعت ۵ عصر</p>
                     <p className="sm:hidden opacity-90">
                       آنلاین | حضور آزاد و رایگان
                     </p>
@@ -118,7 +119,7 @@ export default function Home() {
                       width={48}
                       height={48}
                       className="w-full h-auto"
-                           quality={60}
+                      quality={60}
                     />
                   </div>
                   <span className="font-lalezar text-sm lg:text-lg leading-none text-black whitespace-nowrap">
@@ -148,7 +149,7 @@ export default function Home() {
                       width={48}
                       height={48}
                       className="w-full h-auto"
-                           quality={60}
+                      quality={60}
                     />
                   </div>
                   <span className="font-lalezar text-sm lg:text-lg leading-none text-black whitespace-nowrap">
