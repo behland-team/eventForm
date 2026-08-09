@@ -46,7 +46,7 @@ export default function FormPage() {
       if (!response.ok) {
         throw new Error("مشکلی پیش آمده لطفا دوباره تلاش کنید");
       }
-      toast.success("مشتاق دیدار شما هستیم...");
+      toast.success("اطلاعات شما با موفقیت ثبت شد! لینک برگزاری جلسه در کانال های مجموعه اطلاع رسانی میشن");
       reset();
     } catch (error: unknown) {
       const message =

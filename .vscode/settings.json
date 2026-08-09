@@ -2,5 +2,6 @@
     "github.copilot.chat.codesearch.enabled": true,
     "editor.codeActionsOnSave": {
         
-    }
+    },
+    "workbench.colorCustomizations": {}
 }
