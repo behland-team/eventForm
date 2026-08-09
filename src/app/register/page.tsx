@@ -42,11 +42,17 @@ export default function FormPage() {
         },
         body: JSON.stringify(data),
       });
-      console.log(data);
       if (!response.ok) {
         throw new Error("مشکلی پیش آمده لطفا دوباره تلاش کنید");
       }
-      toast.success("اطلاعات شما با موفقیت ثبت شد! لینک برگزاری جلسه در کانال های مجموعه اطلاع رسانی میشن");
+
+      const result: { emailSent?: boolean } = await response.json();
+
+      toast.success(
+        result.emailSent
+          ? "اطلاعات شما با موفقیت ثبت شد و یک ایمیل تایید برایتان ارسال شد."
+          : "اطلاعات شما با موفقیت ثبت شد، اما ایمیل تایید ارسال نشد.",
+      );
       reset();
     } catch (error: unknown) {
       const message =

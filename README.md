@@ -37,6 +37,18 @@ Tech
 - Next.js App Router, TypeScript
 - Tailwind CSS v4
 - React Hook Form + Zod
+
+Email delivery
+
+- Configure SMTP before starting the app in production:
+  - `SMTP_HOST`
+  - `SMTP_PORT`
+  - `SMTP_USER`
+  - `SMTP_PASS`
+  - `SMTP_SECURE` (`true` or `false`)
+  - `SMTP_TLS_REJECT_UNAUTHORIZED` (`true` or `false`, defaults to `true`)
+  - `EMAIL_FROM` (optional, falls back to `SMTP_USER`)
+
 # eventForm
 
 const res = await fetch("/api/register", {
