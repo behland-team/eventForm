@@ -12,6 +12,7 @@ const RegistrationSchema = z.object({
   email: z.email(),
   telegramId: z.string().optional().default(""),
   phone: z.string().optional().default(""),
+  walletAddress: z.string().max(255).optional().default(""),
   questions: z.string().max(700).optional().default(""),
 });
 
@@ -164,6 +165,7 @@ export async function POST(req: Request) {
       fullName: body.fullName,
       email: body.email,
       phone: body.phone,
+      walletAddress: body.walletAddress,
       telegramId: body.telegramId,
       questions: body.questions,
     },

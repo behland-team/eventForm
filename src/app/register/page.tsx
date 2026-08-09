@@ -15,6 +15,10 @@ const FormSchema = z.object({
   email: z.email("ایمیل معتبر وارد کنید"),
   telegramId: z.string().optional(),
   phone: z.string().optional(),
+  walletAddress: z
+    .string()
+    .max(500, "آدرس کیف پول خیلی طولانی است")
+    .optional(),
   questions: z
     .string()
     .max(700, "سوال شما باید کمتر از 700 کاراکتر باشد")
@@ -164,6 +168,24 @@ export default function FormPage() {
                         placeholder="آی دی تلگرام"
                         {...register("telegramId")}
                       />
+                    </div>
+                  </div>
+
+                  {/* Third Row - Wallet Address */}
+                  <div className="flex flex-col lg:flex-row gap-3 lg:gap-4">
+                    <div className="flex-1">
+                      <input
+                        id="walletAddress"
+                        type="text"
+                        className="w-full px-6 py-3 rounded-lg border border-[#F0F4F9] bg-[#F0F4F9] font-[var(--font-vazirmatn)] text-[14px] text-right dir-rtl text-[#292929] placeholder:text-[#999999] focus:outline-none focus:border-[#4071B7]"
+                        placeholder="آدرس کیف پول"
+                        {...register("walletAddress")}
+                      />
+                      {errors.walletAddress && (
+                        <p className="text-red-500 text-sm mt-1 font-[var(--font-yekan-bakh)]">
+                          {errors.walletAddress.message}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>

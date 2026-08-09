@@ -13,6 +13,7 @@ model EventRegistration {
   fullName    String
   email       String   @unique
   phone       String
+  walletAddress String?
   telegramId  String?
   questions   String?
   createdAt   DateTime @default(now())
