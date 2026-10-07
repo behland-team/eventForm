@@ -1,3 +1,7 @@
+import {
+  apiResponseHeaders as responseHeaders,
+  corsPreflight,
+} from "@/lib/cors";
 import fs from "node:fs";
 import path from "node:path";
 import nodemailer from "nodemailer";
@@ -180,21 +184,9 @@ async function sendConfirmationEmail(
   }
 }
 
-export async function OPTIONS() {
-  return new Response(null, {
-    status: 200,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type",
-    },
-  });
+export function OPTIONS() {
+  return corsPreflight();
 }
-
-const responseHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Cache-Control": "no-store",
-};
 
 export async function POST(req: Request) {
   const json = await req.json().catch(() => null);

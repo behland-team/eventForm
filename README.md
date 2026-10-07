@@ -98,3 +98,6 @@ Repeated use (HTTP 409):
 Other errors: HTTP 400 `INVALID_CODE_FORMAT` (send a five-digit string), HTTP 404 `CODE_NOT_FOUND` (unknown or unassigned), HTTP 503 `SERVICE_UNAVAILABLE` (temporary database failure). Responses are not cached. Exactly one of multiple concurrent calls with the same code can succeed. After a success, a repeated request is rejected even if the caller lost the original response.
 
 Run `npm run prisma:generate` and `npx prisma migrate deploy` when deploying this change. `npm run test:codes` also verifies consumption, simultaneous reuse, requests without authentication, invalid input, and unassigned codes in a temporary database.
+
+
+CORS: both `/api/register` and `/api/codes/redeem` accept cross-origin JSON POSTs. `OPTIONS` returns 204 with allowed methods `POST, OPTIONS`, allowed headers `Content-Type, Authorization`, and `Access-Control-Allow-Origin: *`. Successful and handled error responses include the same CORS headers. These endpoints use no cookies or browser credentials.

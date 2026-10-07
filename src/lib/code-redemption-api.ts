@@ -1,8 +1,8 @@
+import { apiResponseHeaders as headers } from "@/lib/cors";
+
 type RedemptionResult =
   | { status: "redeemed"; registrationId: number }
   | { status: "already_used" | "invalid" };
-
-const headers = { "Cache-Control": "no-store" };
 
 export async function handleCodeRedemption(
   request: Request,

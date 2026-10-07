@@ -21,6 +21,18 @@ const { registerWithCode, redeemRegistrationCode, CodePoolExhaustedError } =
   await import(
     `data:text/javascript;base64,${Buffer.from(compiled).toString("base64")}`
   );
+const corsSource = await readFile(
+  new URL("../src/lib/cors.ts", import.meta.url),
+  "utf8",
+);
+const corsCompiled = ts.transpileModule(corsSource, {
+  compilerOptions: {
+    module: ts.ModuleKind.ESNext,
+    target: ts.ScriptTarget.ES2022,
+  },
+}).outputText;
+const corsUrl = `data:text/javascript;base64,${Buffer.from(corsCompiled).toString("base64")}`;
+const { corsPreflight } = await import(corsUrl);
 const apiSource = await readFile(
   new URL("../src/lib/code-redemption-api.ts", import.meta.url),
   "utf8",
@@ -32,10 +44,10 @@ const apiCompiled = ts.transpileModule(apiSource, {
   },
 }).outputText;
 const { handleCodeRedemption } = await import(
-  `data:text/javascript;base64,${Buffer.from(apiCompiled).toString("base64")}`
+  `data:text/javascript;base64,${Buffer.from(apiCompiled.replace("@/lib/cors", corsUrl)).toString("base64")}`
 );
-function redeemRequest(body) {
-  return handleCodeRedemption(
+async function redeemRequest(body) {
+  const response = await handleCodeRedemption(
     new Request("http://localhost/api/codes/redeem", {
       method: "POST",
       headers: {
@@ -45,7 +57,14 @@ function redeemRequest(body) {
     }),
     (code) => redeemRegistrationCode(db, code),
   );
+  assert.equal(response.headers.get("Access-Control-Allow-Origin"), "*");
+  assert.equal(
+    response.headers.get("Access-Control-Allow-Methods"),
+    "POST, OPTIONS",
+  );
+  return response;
 }
+
 let db;
 let directory;
 before(async () => {
@@ -81,6 +100,29 @@ function visitor(overrides = {}) {
     ...overrides,
   };
 }
+
+test("CORS preflight allows cross-origin JSON POSTs without consuming a code", async () => {
+  const count = await db.registrationCode.count({
+    where: { redeemedAt: { not: null } },
+  });
+  const response = corsPreflight();
+  assert.equal(response.status, 204);
+  assert.equal(await response.text(), "");
+  assert.equal(response.headers.get("Access-Control-Allow-Origin"), "*");
+  assert.equal(
+    response.headers.get("Access-Control-Allow-Methods"),
+    "POST, OPTIONS",
+  );
+  assert.ok(
+    response.headers
+      .get("Access-Control-Allow-Headers")
+      .includes("Content-Type"),
+  );
+  assert.equal(
+    await db.registrationCode.count({ where: { redeemedAt: { not: null } } }),
+    count,
+  );
+});
 
 test("migration pre-generates exactly 1000 unique five-digit codes", async () => {
   const codes = await db.registrationCode.findMany();
