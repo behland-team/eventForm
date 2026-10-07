@@ -5,13 +5,13 @@ module.exports = {
             name: "eventform",
             cwd: "/home/beh-aa/htdocs/aa.beh.land/eventForm",
             script: "node_modules/next/dist/bin/next",
-            args: "start -p 3002",
+            args: "start -p 3004",
             instances: 1,
             exec_mode: "fork",
             watch: false,
             env: {
                 NODE_ENV: "production",
-                PORT: "3002",
+                PORT: "3004",
                 DATABASE_URL: "file:./dev.db"
             }
         }
