@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import {ToastContainer} from "react-toastify";
+import { ToastContainer } from "react-toastify";
 
 export const metadata: Metadata = {
-  title: "بهلند | رویداد پرسش و پاسخ",
-  description: "فرم ثبت‌نام و معرفی رویداد",
+  title: "به‌لند | نمایشگاه",
+  description: "معرفی به‌لند و ثبت اطلاعات تماس بازدیدکنندگان نمایشگاه",
 };
 
 export default function RootLayout({
@@ -17,16 +17,16 @@ export default function RootLayout({
       <body className="antialiased font-lalezar">
         {children}
         <ToastContainer
-            position="top-right"
-            autoClose={5000}
-            hideProgressBar
-            newestOnTop
-            closeOnClick
-            rtl
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="colored"
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar
+          newestOnTop
+          closeOnClick
+          rtl
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
         />
       </body>
     </html>

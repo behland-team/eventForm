@@ -11,7 +11,9 @@
     "typecheck": "tsc --noEmit",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev --name init",
-    "prisma:studio": "prisma studio"
+    "prisma:studio": "prisma studio",
+    "codes:generate": "node scripts/generate-codes.mjs",
+    "test:codes": "node --test tests/registration-codes.test.mjs"
   },
   "dependencies": {
     "@prisma/client": "^6.16.2",

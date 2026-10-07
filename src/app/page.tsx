@@ -4,15 +4,15 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="lg:h-screen bg-[#F0F4F9] overflow-hidden">
+    <main className="min-h-screen bg-[#F0F4F9] overflow-hidden">
       <div className="flex flex-col-reverse lg:flex-row h-full lg:justify-center lg:items-center px-5 py-10 sm:px-10 md:px-20 xl:px-28 max-w-[85rem] mx-auto">
         <div className="lg:w-1/3 xl:w-1/2 relative">
           <Image
             src={Banner.src}
-            alt="Full Picture"
+            alt="شخصیت‌های به‌لند"
             width={696}
             height={799}
-            className="w-full h-full object-cover rounded-2xl"
+            className="w-full h-full object-contain rounded-2xl"
             priority
             quality={60}
           />
@@ -33,16 +33,17 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-4">
             <h1 className=" font-bold text-2xl md:text-4xl leading-tight text-right text-[#4D4D4D] ">
-              همراهان عزیز
-              <span className={"text-[#4071B7]"}> به لند! </span>
+              به غرفه
+              <span className={"text-[#4071B7]"}> به‌لند </span>
+              خوش آمدید!
             </h1>
             <p className="text-[#4D4D4D] text-justify  text-sm md:text-lg  lg:text-xl leading-6 md:leading-[2.5rem] font-medium ">
-              دومین جلسه پرسش‌وپاسخ جامعه و سرمایه‌گذاران به‌لند، به مناسبت
-              یک‌سالگی به‌لند و هفته مشارکت اجتماعی، به‌زودی برگزار می‌شود.
+              از اینکه در نمایشگاه به ما سر زدید، خوشحالیم. در غرفه به‌لند، با
+              مسیر یادگیری هدفمند آشنا شوید و درباره علاقه‌مندی‌ها و فرصت‌های
+              همکاری با تیم ما گفت‌وگو کنید.
               <br />
-              در این رویداد، می‌توانید پرسش‌های خود را درباره مسیر یادگیری، مدل
-              اقتصادی، توکن BEHT و آینده به‌لند مطرح کنید و گزارش یک سال فعالیت،
-              پیشرفت‌ها، چالش‌ها و برنامه‌های پیش‌رو را از تیم به‌لند بشنوید.
+              این آشنایی می‌تواند شروع همراهی ما باشد. با ثبت اطلاعات تماس، بعد
+              از نمایشگاه هم با به‌لند در ارتباط بمانید.
             </p>
           </div>
           <hr
@@ -58,55 +59,12 @@ export default function Home() {
             {/* Event Info - با فاصله برابر از خط */}
             <div className=" flex items-center justify-between">
               <p className="text-center font-vazirmatn font-semibold text-[20px] leading-[100%] text-[#4D4D4D] opacity-100">
-                بهلند : تحولی در یادگیری هدفمند
+                آشنایی در نمایشگاه، همراهی پس از آن
               </p>
-              <span className="text-center font-vazirmatn font-semibold text-[20px] leading-[100%] text-[#4D4D4D] opacity-100 hidden sm:block">
-                آنلاین | حضور آزاد و رایگان
-              </span>
             </div>
-            <div className="flex items-stretch sm:items-center gap-4 justify-between">
-              <div className="sm:w-full   rounded-lg bg-white flex items-center max-md:justify-center p-4 shadow-lg w-1/2 ">
-                <div className="flex items-center flex-col sm:flex-row  gap-2 ">
-                  <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
-                    <Image
-                      src="/Img/Calendar.png"
-                      alt="Calendar"
-                      width={48}
-                      height={48}
-                      className="w-full h-auto"
-                      quality={60}
-                    />
-                  </div>
-                  <div className="font-lalezar text-sm lg:text-lg leading-none text-center sm:text-right text-black">
-                    جمعه ۲۳ مرداد ماه
-                    <br />
-                    <span className="text-xs sm:text-sm">
-                      {" "}
-                      ۱۴۰۵ (۲۱ اگوست ۲۰۲۶){" "}
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className="rounded-lg bg-white flex items-center justify-center p-4 shadow-lg w-1/2 sm:w-fit">
-                <div className="flex items-center gap-2 flex-col sm:flex-row">
-                  <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
-                    <Image
-                      src="/Img/Clock.png"
-                      alt="Clock"
-                      width={48}
-                      height={48}
-                      className="w-full h-auto"
-                      quality={60}
-                    />
-                  </div>
-                  <div className="font-lalezar text-sm lg:text-lg leading-none text-center sm:text-right text-black whitespace-nowrap">
-                    <p> ساعت ۵ عصر</p>
-                    <p className="sm:hidden opacity-90">
-                      آنلاین | حضور آزاد و رایگان
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="rounded-lg bg-[#F0F4F9] p-4 text-sm md:text-base leading-7 text-[#4D4D4D]">
+              برای دریافت کد اختصاصی، نام و نام خانوادگی و ایمیل خود را وارد
+              کنید. ثبت شماره تماس اختیاری است؛ کد شما به ایمیلتان ارسال می‌شود.
             </div>
             <div className="l rounded-[8px] bg-white flex items-center justify-center shadow-lg p-4">
               {/* دیو داخلی: width: 560px, height: 48px, justify-content: space-between */}
@@ -123,7 +81,7 @@ export default function Home() {
                     />
                   </div>
                   <span className="font-lalezar text-sm lg:text-lg leading-none text-black whitespace-nowrap">
-                    کانال رسمی بهلند
+                    اخبار به‌لند در تلگرام
                   </span>
                 </div>
                 <div className="text-left">
@@ -153,7 +111,7 @@ export default function Home() {
                     />
                   </div>
                   <span className="font-lalezar text-sm lg:text-lg leading-none text-black whitespace-nowrap">
-                    وب‌سایت بهلند
+                    بیشتر با به‌لند آشنا شوید
                   </span>
                 </div>
                 <div className="text-left">
@@ -172,7 +130,7 @@ export default function Home() {
               href="/register"
               className="rounded-lg border-2 border-[#335A92] bg-[#4071B7] px-6 py-4 font-lalezar font-semibold text-base leading-none text-white cursor-pointer flex items-center justify-center transition-all duration-200 ease-in-out hover:translate-y-0.5 shadow-[0px_4px_#335A924] active:translate-y-1 active:shadow-none  no-underline"
             >
-              ثبت نام در رویداد
+              ثبت اطلاعات و ارتباط با به‌لند
             </Link>
           </div>
         </section>
